@@ -1,0 +1,22 @@
+package org.example;
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        String str = "I am Dhananjay as developer";
+        String[] strArr = str.split(" ");
+        String reversStr="";
+        for(int i=0; i<strArr.length; i++){
+            String word = strArr[i];
+            String reversWord = "";
+            for(int j=word.length()-1;j>=0; j--){
+                reversWord = reversWord + word.charAt(j);
+            }
+            reversStr = reversStr + reversWord + " ";
+        }
+
+        System.out.println(reversStr);
+    }
+}
