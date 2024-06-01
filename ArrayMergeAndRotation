@@ -46,5 +46,25 @@ public class Main {
             System.out.print(firstArray[i] + " ");
         }
 
+        //Integer[] to int[] using stream
+        List<Integer> list = Arrays.asList(1, 3, 5, 7, 9);
+
+        int[] primitive = list.stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+
+        //int[] to Integer[]
+        int[] intArray = {};
+        Integer[] result = new Integer[intArray.length];
+        for (int i = 0; i < intArray.length; i++) {
+            result[i] = Integer.valueOf(intArray[i]);
+        }
+
+        //Integer[] to int[]
+        Integer[] IntegerArray= {};
+        int[] result1 = new int[IntegerArray.length];
+        for (int i = 0; i < IntegerArray.length; i++) {
+            result[i] = IntegerArray[i].intValue();
+        }
     }
 }
